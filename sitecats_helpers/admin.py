@@ -34,6 +34,7 @@ class CategoryListFilter(admin.SimpleListFilter):
     def queryset(self, request, queryset):
         if self.value() is not None:
             return queryset.filter(categories__category__alias=self.value()).distinct()
+        return queryset
 
 
 class CategoryInlineBase():
