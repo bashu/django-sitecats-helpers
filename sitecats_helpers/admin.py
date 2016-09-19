@@ -41,7 +41,7 @@ class CategoryInlineBase():
     verbose_name = _('category')
     verbose_name_plural = _('categories')
     ordering = ['category__title']
-    exclude = ['creator']
+    # exclude = ['creator']
 
 
 class CategoryStackedInline(CategoryInlineBase, GenericStackedInline):
