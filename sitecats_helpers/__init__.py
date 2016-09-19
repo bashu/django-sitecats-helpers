@@ -2,7 +2,7 @@ import django
 
 if django.VERSION < (1, 9):
     from .admin import (
-        TieCounter,
+        CategoryCounter,
         CategoryListFilter,
         CategoryStackedInline,
         CategoryTabularInline,

@@ -44,21 +44,21 @@ Then add the following settings:
 Usage
 =====
 
-TieCounter
-----------
+CategoryCounter
+---------------
 
 Display (and sort by) number of categories associated with objects.
 
 .. code-block:: python
 
-    from sitecats_helpers import TieCounter
+    from sitecats_helpers import CategoryCounter
     # For Django 1.9+, use this instead:
-    # from sitecats_helpers.admin import TieCounter
+    # from sitecats_helpers.admin import CategoryCounter
 
-    class MyModelAdmin(TieCounter, admin.ModelAdmin):    # TieCounter before ModelAdmin
+    class MyModelAdmin(CategoryCounter, admin.ModelAdmin):    # CategoryCounter before ModelAdmin
         list_display = (
             ...
-            'tie_counter',
+            'category_counter',
         )
 
 CategoryListFilter

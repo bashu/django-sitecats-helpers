@@ -10,16 +10,16 @@ from django.utils.translation import ugettext_lazy as _
 from sitecats.utils import get_category_model, get_tie_model
 
 
-class TieCounter():
+class CategoryCounter():
 
     def get_queryset(self, request):
         return self.model.objects.get_queryset().annotate(
-            tie_counter=Count('categories', distinct=True))
+            category_counter=Count('categories__category', distinct=True))
 
-    def tie_counter(self, obj):
-        return obj.tie_counter
-    tie_counter.admin_order_field = 'tie_counter'
-    tie_counter.short_description = _('# of ties')
+    def category_counter(self, obj):
+        return obj.category_counter
+    category_counter.admin_order_field = 'category_counter'
+    category_counter.short_description = _('# of categories')
 
 
 class CategoryListFilter(admin.SimpleListFilter):
