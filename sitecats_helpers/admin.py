@@ -28,12 +28,13 @@ class CategoryListFilter(admin.SimpleListFilter):
 
     def lookups(self, request, model_admin):
         ct = ContentType.objects.get_for_model(model_admin.model)
-        return tuple([(cat.alias, cat.title) for cat in get_tie_model().get_linked_objects(
+        return tuple([(cat.pk, cat.title) for cat in get_tie_model().get_linked_objects(
             filter_kwargs={'content_type': ct}, by_category=True)])
 
     def queryset(self, request, queryset):
         if self.value() is not None:
-            return queryset.filter(categories__category__alias=self.value())
+            return queryset.filter(categories__category__id=self.value()).distinct()
+        return queryset
 
 
 class CategoryInlineBase():
@@ -41,7 +42,6 @@ class CategoryInlineBase():
     verbose_name = _('category')
     verbose_name_plural = _('categories')
     ordering = ['category__title']
-    # exclude = ['creator']
 
 
 class CategoryStackedInline(CategoryInlineBase, GenericStackedInline):
