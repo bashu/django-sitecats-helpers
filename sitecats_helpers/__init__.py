@@ -10,4 +10,4 @@ if django.VERSION < (1, 9):
 
 default_app_config = 'sitecats_helpers.apps.SitecatsHelpersConfig'
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
