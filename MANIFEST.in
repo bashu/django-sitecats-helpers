@@ -1,3 +1,4 @@
+include AUTHORS
 include README.rst
 include LICENSE
 recursive-include sitecats_helpers/locale *.mo
