@@ -14,9 +14,6 @@ Authored by `Basil Shubin <http://github.com/bashu>`_, inspired by django-taggit
 .. image:: https://img.shields.io/github/license/bashu/django-sitecats-helpers.svg
     :target: https://pypi.python.org/pypi/django-sitecats-helpers/
 
-.. image:: https://landscape.io/github/bashu/django-sitecats-helpers/develop/landscape.svg?style=flat
-    :target: https://landscape.io/github/bashu/django-sitecats-helpers/develop
-
 Installation
 ============
 
