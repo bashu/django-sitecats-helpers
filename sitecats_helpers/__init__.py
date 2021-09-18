@@ -8,4 +8,4 @@ if django.VERSION < (1, 9):
         CategoryTabularInline,
     )
 
-default_app_config = 'sitecats_helpers.apps.SitecatsHelpersConfig'
+default_app_config = "sitecats_helpers.apps.SitecatsHelpersConfig"
