@@ -1,10 +1,6 @@
 django-sitecats-helpers
 =======================
 
-Django admin helper classes for django-sitecats_ categories.
-
-Authored by `Basil Shubin <http://github.com/bashu>`_, inspired by django-taggit-helpers_
-
 .. image:: https://img.shields.io/pypi/v/django-sitecats-helpers.svg
     :target: https://pypi.python.org/pypi/django-sitecats-helpers/
 
@@ -13,6 +9,10 @@ Authored by `Basil Shubin <http://github.com/bashu>`_, inspired by django-taggit
 
 .. image:: https://img.shields.io/github/license/bashu/django-sitecats-helpers.svg
     :target: https://pypi.python.org/pypi/django-sitecats-helpers/
+
+Django admin helper classes for django-sitecats_ categories.
+
+Authored by `Basil Shubin <http://github.com/bashu>`_, inspired by django-taggit-helpers_
 
 Installation
 ============
@@ -101,7 +101,7 @@ Add tabular inline for categorise to admin.
         inlines = [CategoryTabularInline]
 
 Contributing
-------------
+============
 
 If you like this module, forked it, or would like to improve it, please let us know!
 Pull requests are welcome too. :-)
