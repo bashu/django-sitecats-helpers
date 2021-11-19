@@ -15,7 +15,7 @@ Django admin helper classes for django-sitecats_ categories.
 Authored by `Basil Shubin <http://github.com/bashu>`_, inspired by django-taggit-helpers_
 
 Installation
-============
+------------
 
 First install the module, preferably in a virtual environment. It can be installed from PyPI:
 
@@ -23,9 +23,8 @@ First install the module, preferably in a virtual environment. It can be install
 
     pip install django-sitecats-helpers
 
-
-Configuration
--------------
+Setup
+-----
 
 First make sure the project is configured for django-sitecats_.
 
@@ -39,18 +38,16 @@ Then add the following settings:
 
 
 Usage
-=====
+-----
 
 CategoryCounter
----------------
+~~~~~~~~~~~~~~~
 
 Display (and sort by) number of categories associated with objects.
 
 .. code-block:: python
 
-    from sitecats_helpers import CategoryCounter
-    # For Django 1.9+, use this instead:
-    # from sitecats_helpers.admin import CategoryCounter
+    from sitecats_helpers.admin import CategoryCounter
 
     class MyModelAdmin(CategoryCounter, admin.ModelAdmin):    # CategoryCounter before ModelAdmin
         list_display = (
@@ -59,52 +56,51 @@ Display (and sort by) number of categories associated with objects.
         )
 
 CategoryListFilter
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Filter records by categories for the current model only.
 
 .. code-block:: python
 
-    from sitecats_helpers import CategoryListFilter
-    # For Django 1.9+, use this instead:
-    # from sitecats_helpers.admin import CategoryListFilter
+    from sitecats_helpers.admin import CategoryListFilter
 
     class MyModelAdmin(admin.ModelAdmin):
         list_filter = [CategoryListFilter]
 
 CategoryStackedInline
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Add stacked inline for categories to admin.
 
 .. code-block:: python
 
-    from sitecats_helpers import CategoryStackedInline
-    # For Django 1.9+, use this instead:
-    # from sitecats_helpers.admin import CategoryStackedInline
+    from sitecats_helpers.admin import CategoryStackedInline
 
     class MyModelAdmin(admin.ModelAdmin):
         inlines = [CategoryStackedInline]
 
 CategoryTabularInline
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Add tabular inline for categorise to admin.
 
 .. code-block:: python
 
-    from sitecats_helpers import CategoryTabularInline
-    # For Django 1.9+, use this instead:
-    # from sitecats_helpers.admin import CategoryTabularInline
+    from sitecats_helpers.admin import CategoryTabularInline
 
     class MyModelAdmin(admin.ModelAdmin):
         inlines = [CategoryTabularInline]
 
 Contributing
-============
+------------
 
 If you like this module, forked it, or would like to improve it, please let us know!
 Pull requests are welcome too. :-)
+
+License
+-------
+
+``django-sitecats-helpers`` is released under the MIT license.
 
 .. _django-sitecats: https://github.com/idlesign/django-sitecats
 .. _django-taggit-helpers: https://github.com/mfcovington/django-taggit-helpers
