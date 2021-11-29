@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from django.contrib import admin
 from django.contrib.contenttypes.admin import (
     GenericStackedInline, GenericTabularInline)
@@ -27,10 +25,10 @@ class CategoryListFilter(admin.SimpleListFilter):
     def lookups(self, request, model_admin):
         ct = ContentType.objects.get_for_model(model_admin.model)
         return tuple(
-            [
+            
                 (cat.pk, cat.title)
                 for cat in get_tie_model().get_linked_objects(filter_kwargs={"content_type": ct}, by_category=True)
-            ]
+            
         )
 
     def queryset(self, request, queryset):

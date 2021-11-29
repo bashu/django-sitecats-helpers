@@ -1,4 +1,4 @@
-include AUTHORS
-include README.rst
+include CHANGES.rst
 include LICENSE
-recursive-include sitecats_helpers/locale *.mo
+include README.rst
+recursive-include sitecats_helpers/locale *.po *.mo
