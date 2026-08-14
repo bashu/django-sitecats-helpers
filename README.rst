@@ -1,14 +1,17 @@
 django-sitecats-helpers
 =======================
 
-.. image:: https://img.shields.io/pypi/v/django-sitecats-helpers.svg
+.. image:: https://badge.fury.io/py/django-sitecats-helpers.svg
+    :target: https://badge.fury.io/py/django-sitecats-helpers
+
+.. image:: https://img.shields.io/pypi/pyversions/django-sitecats-helpers.svg
     :target: https://pypi.python.org/pypi/django-sitecats-helpers/
 
-.. image:: https://img.shields.io/pypi/dm/django-sitecats-helpers.svg
+.. image:: https://img.shields.io/pypi/djversions/django-sitecats-helpers.svg
     :target: https://pypi.python.org/pypi/django-sitecats-helpers/
 
-.. image:: https://img.shields.io/github/license/bashu/django-sitecats-helpers.svg
-    :target: https://pypi.python.org/pypi/django-sitecats-helpers/
+.. image:: https://github.com/bashu/django-sitecats-helpers/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/bashu/django-sitecats-helpers/actions/workflows/test.yml
 
 Django admin helper classes for django-sitecats_ categories.
 
