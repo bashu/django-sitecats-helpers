@@ -12,7 +12,7 @@ from .models import Article
 from .models import Comment
 
 
-class CategoryListFilterTestCase(TestCase):
+class CategoryListFilterTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.user = get_user_model().objects.create_superuser(
