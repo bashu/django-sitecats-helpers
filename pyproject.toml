@@ -179,6 +179,6 @@ ini_options.addopts = [ "--ds=sitecats_helpers.tests.settings", "--reuse-db", "-
 
 # ==== Coverage ====
 [tool.coverage]
+run.source = [ "sitecats_helpers" ]
 run.omit = [ "*/migrations/*", "*/tests/*" ]
 run.relative_files = true
-run.source = [ "sitecats_helpers" ]
