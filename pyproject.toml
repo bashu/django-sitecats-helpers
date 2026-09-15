@@ -55,6 +55,7 @@ dev = [
 
 [tool.setuptools]
 packages.find.include = [ "sitecats_helpers*" ]
+packages.find.exclude = [ "sitecats_helpers.tests*" ]
 include-package-data = true
 package-data.sitecats_helpers = [ "locale/**/*.mo", "locale/**/*.po" ]
 dynamic.readme = { file = [ "README.rst", "CHANGES.rst" ], content-type = "text/x-rst" }
