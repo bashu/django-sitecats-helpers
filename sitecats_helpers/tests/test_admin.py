@@ -17,7 +17,7 @@ from .models import Article
 from .models import Comment
 
 
-class CategoryCounterTestCase(TestCase):
+class CategoryCounterTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.user = get_user_model().objects.create_superuser(
@@ -71,7 +71,7 @@ class CategoryCounterTestCase(TestCase):
         assert ordered == [self.untied, self.tied_once, self.tied_twice]
 
 
-class CategoryInlineTestCase(TestCase):
+class CategoryInlineTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.user = get_user_model().objects.create_superuser(

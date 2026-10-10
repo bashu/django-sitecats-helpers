@@ -1,6 +1,12 @@
 Changes
 -------
 
+1.2.0 (2026-10-10)
+~~~~~~~~~~~~~~~~~~
+
+* Added Python 3.15 support.
+* Dropped Python 3.10 support; now requires Python 3.11-3.15.
+
 1.1.0 (2026-08-14)
 ~~~~~~~~~~~~~~~~~~
 
