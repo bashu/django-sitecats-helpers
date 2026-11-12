@@ -1,10 +1,8 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.admin import GenericStackedInline
 from django.contrib.contenttypes.admin import GenericTabularInline
-from django.test import RequestFactory
-from django.test import TestCase
 
+import pytest
 from sitecats.utils import get_category_model
 from sitecats.utils import get_tie_model
 
@@ -17,14 +15,12 @@ from .models import Article
 from .models import Comment
 
 
-class CategoryCounterTest(TestCase):
-    def setUp(self):
-        self.factory = RequestFactory()
-        self.user = get_user_model().objects.create_superuser(
-            username="admin",
-            email="admin@example.com",
-            password="pw",  # noqa: S106
-        )
+class TestCategoryCounter:
+    @pytest.fixture(autouse=True)
+    def setup(self, rf, admin_user):
+        self.factory = rf
+        self.user = admin_user
+
         category_model = get_category_model()
         self.cat1 = category_model.add(title="Politics", creator=self.user)
         self.cat2 = category_model.add(title="Sports", creator=self.user)
@@ -71,14 +67,11 @@ class CategoryCounterTest(TestCase):
         assert ordered == [self.untied, self.tied_once, self.tied_twice]
 
 
-class CategoryInlineTest(TestCase):
-    def setUp(self):
-        self.factory = RequestFactory()
-        self.user = get_user_model().objects.create_superuser(
-            username="admin",
-            email="admin@example.com",
-            password="pw",  # noqa: S106
-        )
+class TestCategoryInline:
+    @pytest.fixture(autouse=True)
+    def setup(self, rf, admin_user):
+        self.factory = rf
+        self.user = admin_user
 
     def get_request(self):
         request = self.factory.get("/")

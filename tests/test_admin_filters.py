@@ -1,8 +1,6 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
-from django.test import RequestFactory
-from django.test import TestCase
 
+import pytest
 from sitecats.utils import get_category_model
 
 from sitecats_helpers.admin import CategoryListFilter
@@ -12,14 +10,12 @@ from .models import Article
 from .models import Comment
 
 
-class CategoryListFilterTest(TestCase):
-    def setUp(self):
-        self.factory = RequestFactory()
-        self.user = get_user_model().objects.create_superuser(
-            username="admin",
-            email="admin@example.com",
-            password="pw",  # noqa: S106
-        )
+class TestCategoryListFilter:
+    @pytest.fixture(autouse=True)
+    def setup(self, rf, admin_user):
+        self.factory = rf
+        self.user = admin_user
+
         category_model = get_category_model()
         self.tied = category_model.add(title="Tied", creator=self.user)
 

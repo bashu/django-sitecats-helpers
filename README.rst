@@ -15,7 +15,7 @@ django-sitecats-helpers
 
 Django admin helper classes for django-sitecats_ categories.
 
-Authored by `Basil Shubin <http://github.com/bashu>`_, inspired by django-taggit-helpers_
+Authored by `Basil Shubin <http://github.com/bashu>`_ (who is available for freelance/contract work), inspired by django-taggit-helpers_
 
 Installation
 ------------
