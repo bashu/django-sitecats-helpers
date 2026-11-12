@@ -1,6 +1,14 @@
 Changes
 -------
 
+1.2.1 (2026-11-12)
+~~~~~~~~~~~~~~~~~~
+
+* Switched build backend from setuptools to hatchling.
+* Moved package to ``src/`` layout; tests moved to top-level ``tests/``.
+* Ported tests to pytest-django fixtures.
+* Removed unused mypy, django-stubs, djLint and factory-boy dev dependencies.
+
 1.2.0 (2026-10-10)
 ~~~~~~~~~~~~~~~~~~
 
