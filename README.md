@@ -2,11 +2,11 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/bashu/django-sitecats-helpers/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                              |    Stmts |     Miss |    Cover |   Missing |
-|---------------------------------- | -------: | -------: | -------: | --------: |
-| sitecats\_helpers/\_\_init\_\_.py |        0 |        0 |     100% |           |
-| sitecats\_helpers/admin.py        |       32 |        0 |     100% |           |
-| **TOTAL**                         |   **32** |    **0** | **100%** |           |
+| Name                                  |    Stmts |     Miss |    Cover |   Missing |
+|-------------------------------------- | -------: | -------: | -------: | --------: |
+| src/sitecats\_helpers/\_\_init\_\_.py |        0 |        0 |     100% |           |
+| src/sitecats\_helpers/admin.py        |       32 |        0 |     100% |           |
+| **TOTAL**                             |   **32** |    **0** | **100%** |           |
 
 
 ## Setup coverage badge
